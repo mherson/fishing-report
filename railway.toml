@@ -1,0 +1,13 @@
+
+[build]
+builder = "nixpacks"
+ 
+[build.nixpacksPlan.phases.setup]
+nixPkgs = ["python311"]
+ 
+[build.nixpacksPlan.phases.install]
+cmds = ["pip install -r requirements.txt"]
+ 
+[deploy]
+startCommand = "python daily_fishing_sms.py"
+ 
